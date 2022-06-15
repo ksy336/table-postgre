@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31f76186-7cac-4093-b307-fa51dc7c136a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/back/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +17,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/front" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2AZEDU6UyUE3NwHuM9zQSQuWntg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -42,8 +34,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\table-postgre" />
       <recent name="C:\Users\user\Desktop\table-postgre\back" />
+      <recent name="C:\Users\user\Desktop\table-postgre" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (1)">
@@ -106,6 +98,7 @@
       <updated>1655208588278</updated>
       <workItem from="1655208589363" duration="13343000" />
       <workItem from="1655284095287" duration="560000" />
+      <workItem from="1655284985969" duration="1017000" />
     </task>
     <servers />
   </component>
