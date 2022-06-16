@@ -1,0 +1,22 @@
+.items-filter {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-filter__control {
+  margin: 1rem 60px;
+}
+
+.items-filter label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-right: 10px;
+}
+
+.items-filter select {
+  font: inherit;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  border-radius: 6px;
+}

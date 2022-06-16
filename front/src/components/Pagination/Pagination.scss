@@ -1,0 +1,115 @@
+.pages {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.page-span,
+.current-page {
+  border: 3px solid black;
+  border-radius: 100%;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+}
+.current-page {
+  border: 4px solid lightseagreen;
+  font-weight: 700;
+}
+
+.container {
+  margin: 20px auto;
+  text-align: center;
+  max-width: 300px;
+}
+.container .nav__pagination {
+  margin: 15px 0;
+}
+.nav__pagination {
+  padding: 4px;
+  background-clip: padding-box;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+  box-shadow: 0 1px rgba(255, 255, 255, 0.05);
+}
+.nav__pagination > a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+  padding: 0 6px;
+  min-width: 34px;
+  min-height: 34px;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+  font-weight: normal;
+  text-align: center;
+  color: gray;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+
+
+.nav__pagination :first-child {
+  margin-left: 0;
+}
+
+.nav__pagination > a:hover {
+  background-color: black;
+}
+
+.nav__pagination .prev, .nav__pagination .next {
+  font-size: 1.4rem;
+}
+@media screen and(max-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
+  .nav__pagination {
+    padding: 14px;
+  }
+  .nav__pagination .prev, .nav__pagination .next {
+      font-size: 1.8rem;
+    }
+  .nav__pagination > a {
+    padding: 2px 8px;
+    font-size: 2.7rem;
+    line-height: 2.2rem;
+    font-weight: normal;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+.nav__pagination a:focus, a:active {;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,.25);
+  border-left-width:1px;
+}
+
+.pages {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.page-span,
+.current-page {
+  border: 3px solid white;
+  border-radius: 100%;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+}
+.current-page {
+  border: 4px solid lightseagreen;
+  font-weight: 700;
+}

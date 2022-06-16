@@ -1,8 +1,14 @@
 section {
-  padding-top: 100px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 50px;
   margin: 0 auto;
+}
+.filter-components{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  padding-top: 0;
 }
 .first-line__title {
   display: flex;
@@ -32,7 +38,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 3px solid black;
+  border: 1px solid black;
   background: antiquewhite;
   cursor: pointer;
 }
@@ -44,6 +50,11 @@ section {
   padding: 10px;
   padding-right: 20px;
 }
+.next-line__items:hover {
+ background: silver;
+  transform: scale(1);
+}
+
 .next-line__items:last-child {
   border-right: none;
 }
