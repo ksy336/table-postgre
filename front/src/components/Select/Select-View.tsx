@@ -1,44 +1,15 @@
-import React, { ChangeEvent } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../types/types';
-import {
-  getDataForSorting,
-  filterByAmount,
-  changeSortedStatus,
-  filteredByColumn,
-  filteredByCondition,
-} from '../../store/items-slice';
+import React from 'react';
 import { Button } from 'antd';
+import { ISelect } from './types';
 import SearchBar from '../SearchBar/SearchBar';
-import './Select.scss';
 
-const Select = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const {
-    inputValue: enteredValueForSorting,
-    paginatedItems,
-    filterByColumn,
-    filterByCondition,
-  } = useSelector((state: RootState) => state.items);
-
-  const selectHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filteredByColumn(e.target.value));
-  };
-  const selectConditionHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-    dispatch(filteredByCondition(e.target.value));
-  };
-  const handleSubmitForSort = (event: ChangeEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    dispatch(changeSortedStatus(true));
-    const submitData = {
-      filterByColumn,
-      filterByCondition,
-      enteredValueForSorting,
-    };
-    dispatch(getDataForSorting(submitData));
-    dispatch(filterByAmount(enteredValueForSorting));
-  };
-
+const SelectView = ({
+  handleSubmitForSort,
+  filterByColumn,
+  selectHandler,
+  filterByCondition,
+  selectConditionHandler,
+}: ISelect) => {
   return (
     <div className="filter-components">
       <form className="form form-submit" onSubmit={handleSubmitForSort}>
@@ -78,4 +49,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default SelectView;

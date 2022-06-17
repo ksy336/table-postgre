@@ -1,16 +1,11 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import { setInputValue } from '../../store/items-slice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../types/types';
 import './SearchBar.scss';
 
 const SearchBar = () => {
-  //const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch<AppDispatch>();
-
-  // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setInputValue(e.target.value);
-  // };
 
   return (
     <div className="wrapper search__wrapper">

@@ -1,9 +1,8 @@
 import React from 'react';
 import { ITable, ITableItems } from './types';
 import TableRow from './TableRow/TableRow';
-import Pagination from '../Pagination/Pagination';
-import SearchBar from '../SearchBar/SearchBar';
-import Select from '../Select/Select';
+import PaginationContainer from '../Pagination/Pagination-Container';
+import SelectContainer from '../Select/Select-Container';
 
 const TableView = ({
   tableItems,
@@ -16,7 +15,7 @@ const TableView = ({
   return (
     <>
       <section>
-        <Select />
+        <SelectContainer />
         <div className="first-line__title">
           <div className="first-line__first">
             <h4 className="data">Date</h4>
@@ -56,7 +55,11 @@ const TableView = ({
             );
           })}
       </section>
-      <Pagination paginate={paginate} tableItems={tableItems} itemsPerPage={itemsPerPage} />
+      <PaginationContainer
+        paginate={paginate}
+        tableItems={tableItems}
+        itemsPerPage={itemsPerPage}
+      />
     </>
   );
 };

@@ -13,6 +13,7 @@ const initialState: SelectedState = {
     isSorted: false,
     filterByColumn: "",
     filterByCondition: "",
+    tableItems: [],
 }
 const itemsSlice = createSlice({
     name: "items",
@@ -39,9 +40,12 @@ const itemsSlice = createSlice({
         },
         filteredByCondition(state, action) {
             state.filterByCondition = action.payload;
+        },
+        setTableItems(state, action) {
+            state.tableItems = action.payload;
         }
     }
 });
 
-export const {setInputValue, getDataForSorting, getNewFilteredData, filterByAmount, changeSortedStatus, filteredByColumn, filteredByCondition} = itemsSlice.actions;
+export const {setInputValue, getDataForSorting, getNewFilteredData, filterByAmount, changeSortedStatus, filteredByColumn, filteredByCondition, setTableItems} = itemsSlice.actions;
 export default itemsSlice.reducer;

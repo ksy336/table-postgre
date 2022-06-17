@@ -1,14 +1,7 @@
 import React from 'react';
-import { IPaginate } from '../Table/types';
-import './Pagination.scss';
+import { IPagination } from './types';
 
-const Pagination = ({ paginate, tableItems, itemsPerPage }: IPaginate) => {
-  const totalItems = tableItems.length;
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.floor(totalItems / itemsPerPage); i += 1) {
-    pageNumbers.push(i);
-  }
-
+const PaginationViewComponent = ({ pageNumbers, paginate }: IPagination) => {
   return (
     <footer className="footer">
       <section className="pagination">
@@ -36,4 +29,4 @@ const Pagination = ({ paginate, tableItems, itemsPerPage }: IPaginate) => {
   );
 };
 
-export default Pagination;
+export default PaginationViewComponent;
