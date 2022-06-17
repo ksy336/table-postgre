@@ -8,7 +8,6 @@ const Pagination = ({ paginate, tableItems, itemsPerPage }: IPaginate) => {
   for (let i = 1; i <= Math.floor(totalItems / itemsPerPage); i += 1) {
     pageNumbers.push(i);
   }
-  console.log(pageNumbers, totalItems, itemsPerPage);
 
   return (
     <footer className="footer">

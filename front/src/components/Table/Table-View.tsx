@@ -16,10 +16,7 @@ const TableView = ({
   return (
     <>
       <section>
-        <div className="filter-components">
-          <Select />
-          <SearchBar />
-        </div>
+        <Select />
         <div className="first-line__title">
           <div className="first-line__first">
             <h4 className="data">Date</h4>

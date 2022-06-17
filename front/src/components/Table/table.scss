@@ -6,9 +6,9 @@ section {
 }
 .filter-components{
   display: flex;
-  justify-content: space-between;
-  padding: 50px;
+  flex-direction: column;
   padding-top: 0;
+  padding-bottom: 20px;
 }
 .first-line__title {
   display: flex;
@@ -87,4 +87,8 @@ section {
     font-size: 2.5rem;
     line-height: 3rem;
   }
+}
+.data-no-found {
+  display: flex;
+  justify-content: center;
 }

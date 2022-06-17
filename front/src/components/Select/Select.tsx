@@ -9,6 +9,7 @@ import {
   filteredByCondition,
 } from '../../store/items-slice';
 import { Button } from 'antd';
+import SearchBar from '../SearchBar/SearchBar';
 import './Select.scss';
 
 const Select = () => {
@@ -19,9 +20,6 @@ const Select = () => {
     filterByColumn,
     filterByCondition,
   } = useSelector((state: RootState) => state.items);
-  //const [enteredValue, setEnteredValue] = useState('');
-  //const [enteredCondition, setEnteredCondition] = useState('');
-  console.log(enteredValueForSorting);
 
   const selectHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     dispatch(filteredByColumn(e.target.value));
@@ -42,36 +40,41 @@ const Select = () => {
   };
 
   return (
-    <form onSubmit={handleSubmitForSort}>
-      <div className="items-filter">
-        <div className="items-filter__control">
-          <label>Filter by column:</label>
-          <select value={filterByColumn} onChange={selectHandler}>
-            <option disabled value="">
-              Filter by column
-            </option>
-            <option value="title">Title</option>
-            <option value="amount">Amount</option>
-            <option value="distance">Distance</option>
-          </select>
+    <div className="filter-components">
+      <form className="form form-submit" onSubmit={handleSubmitForSort}>
+        <div className="items-filter">
+          <div className="items-filter__control">
+            <label>Filter by column:</label>
+            <select value={filterByColumn} onChange={selectHandler}>
+              <option disabled value="">
+                Filter by column
+              </option>
+              <option value="title">Title</option>
+              <option value="amount">Amount</option>
+              <option value="distance">Distance</option>
+            </select>
+          </div>
+          <div className="items-filter__control">
+            <label>Filter by condition:</label>
+            <select value={filterByCondition} onChange={selectConditionHandler}>
+              <option disabled value="">
+                Filter by condition
+              </option>
+              <option value="equal">Equal</option>
+              <option value="more">More </option>
+              <option value="less">Less </option>
+              <option value="contains">Contains </option>
+            </select>
+          </div>
         </div>
-        <div className="items-filter__control">
-          <label>Filter by condition:</label>
-          <select value={filterByCondition} onChange={selectConditionHandler}>
-            <option disabled value="">
-              Filter by condition
-            </option>
-            <option value="equals">Equals Items</option>
-            <option value="more">More than </option>
-            <option value="less">Less than </option>
-            <option value="contains">Contains </option>
-          </select>
+        <SearchBar />
+        <div className="button button-submit">
+          <Button type="primary" htmlType="submit" className="button">
+            Sort
+          </Button>
         </div>
-      </div>
-      <Button type="primary" htmlType="submit">
-        Sort
-      </Button>
-    </form>
+      </form>
+    </div>
   );
 };
 
