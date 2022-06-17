@@ -10,4 +10,11 @@ export interface ITableItems {
     paginate: (page:number) => void;
     itemsPerPage: number;
     slicedItemsPerPage: Array<never>;
+    sortedList: Array<never>;
+    isSorted: boolean;
+}
+export interface IPaginate {
+    tableItems: [];
+    paginate: (page:number) => void;
+    itemsPerPage: number;
 }

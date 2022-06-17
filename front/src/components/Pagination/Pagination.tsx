@@ -1,8 +1,8 @@
 import React from 'react';
-import { ITableItems } from '../Table/types';
+import { IPaginate } from '../Table/types';
 import './Pagination.scss';
 
-const Pagination = ({ paginate, tableItems, itemsPerPage, slicedItemsPerPage }: ITableItems) => {
+const Pagination = ({ paginate, tableItems, itemsPerPage }: IPaginate) => {
   const totalItems = tableItems.length;
   const pageNumbers = [];
   for (let i = 1; i <= Math.floor(totalItems / itemsPerPage); i += 1) {

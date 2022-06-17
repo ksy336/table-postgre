@@ -5,11 +5,21 @@ import Pagination from '../Pagination/Pagination';
 import SearchBar from '../SearchBar/SearchBar';
 import Select from '../Select/Select';
 
-const TableView = ({ tableItems, paginate, itemsPerPage, slicedItemsPerPage }: ITableItems) => {
+const TableView = ({
+  tableItems,
+  paginate,
+  itemsPerPage,
+  slicedItemsPerPage,
+  sortedList,
+  isSorted,
+}: ITableItems) => {
   return (
     <>
       <section>
-        <Select />
+        <div className="filter-components">
+          <Select />
+          <SearchBar />
+        </div>
         <div className="first-line__title">
           <div className="first-line__first">
             <h4 className="data">Date</h4>
@@ -24,24 +34,32 @@ const TableView = ({ tableItems, paginate, itemsPerPage, slicedItemsPerPage }: I
             <h4 className="data">Distance</h4>
           </div>
         </div>
-        {slicedItemsPerPage?.map(({ timedate, title, amount, distance }: ITable) => {
-          return (
-            <TableRow
-              key={Math.random().toString()}
-              timedate={new Date(timedate).toISOString().slice(0, 10)}
-              title={title}
-              amount={amount}
-              distance={distance}
-            />
-          );
-        })}
+        {!isSorted &&
+          slicedItemsPerPage?.map(({ timedate, title, amount, distance }: ITable) => {
+            return (
+              <TableRow
+                key={Math.random().toString()}
+                timedate={new Date(timedate).toISOString().slice(0, 10)}
+                title={title}
+                amount={amount}
+                distance={distance}
+              />
+            );
+          })}
+        {isSorted &&
+          sortedList?.map(({ timedate, title, amount, distance }: ITable) => {
+            return (
+              <TableRow
+                key={Math.random().toString()}
+                timedate={new Date(timedate).toISOString().slice(0, 10)}
+                title={title}
+                amount={amount}
+                distance={distance}
+              />
+            );
+          })}
       </section>
-      <Pagination
-        slicedItemsPerPage={slicedItemsPerPage}
-        paginate={paginate}
-        tableItems={tableItems}
-        itemsPerPage={itemsPerPage}
-      />
+      <Pagination paginate={paginate} tableItems={tableItems} itemsPerPage={itemsPerPage} />
     </>
   );
 };
